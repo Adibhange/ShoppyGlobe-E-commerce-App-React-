@@ -7,6 +7,7 @@ import {
 import emptyCart from "../assets/empty_cart.webp";
 import { FaTrash } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -38,14 +39,16 @@ const Cart = () => {
                   key={item.id}
                   className="m-4 flex items-center justify-between rounded-md bg-foreground p-4 text-lg shadow-md"
                 >
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={item.thumbnail}
-                      alt={item.title}
-                      className="h-24"
-                    />
-                    <p className="font-semibold">{item.title}</p>
-                  </div>
+                  <Link to={`/product/${item.id}`}>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={item.thumbnail}
+                        alt={item.title}
+                        className="h-24"
+                      />
+                      <p className="font-semibold">{item.title}</p>
+                    </div>
+                  </Link>
 
                   <div className="flex items-center gap-4">
                     <p className="font-semibold">

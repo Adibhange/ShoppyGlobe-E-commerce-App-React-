@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
   return (
     <section className="container mx-auto mt-4 flex w-3/4 gap-4 rounded-lg bg-foreground shadow-md">
-      <div className="flex w-1/2 items-center justify-center rounded-l-lg bg-background">
+      <div className="flex w-1/2 items-center justify-center rounded-l-lg bg-primary/20">
         <img src={product.thumbnail} alt={product.title} className="h-96" />
       </div>
       <div className="w-1/2 space-y-8 p-4">
