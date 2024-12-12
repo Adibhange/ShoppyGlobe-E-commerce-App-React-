@@ -7,11 +7,12 @@ import {
 import emptyCart from "../assets/empty_cart.webp";
 import { FaTrash } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
@@ -26,8 +27,9 @@ const Cart = () => {
   };
 
   const handleCheckout = () => {
-    alert("Order Placed Successfully");
+    navigate("/checkout");
   };
+
   return (
     <section className="container mx-auto mt-4 w-[95%] rounded-md">
       <div className="flex flex-col gap-4">
@@ -83,7 +85,7 @@ const Cart = () => {
 
             {/* Checkout*/}
             <div className="flex flex-col gap-4 rounded-md bg-primary/20 px-8 py-4">
-              <p>Shipping: $ 0.00</p>
+              <p>Shipping: $ 1.00</p>
               <p>
                 <span>Subtotal: </span>
                 <span>

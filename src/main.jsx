@@ -10,6 +10,7 @@ const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 import store from "./redux/store";
 import ProductDetails from "./pages/ProductDetails.jsx";
 import Cart from "./pages/Cart.jsx";
+import Checkout from "./pages/Checkout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "product/:id", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 ]);
