@@ -9,8 +9,11 @@ const useFetch = (url) => {
     const fetchData = async () => {
       try {
         const response = await fetch(url);
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error("Failed to fetch products!");
+        }
 
+        const data = await response.json();
         setData(data.products);
       } catch (error) {
         setError(error.message);
