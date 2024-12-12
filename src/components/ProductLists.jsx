@@ -1,5 +1,6 @@
 import useFetch from "./../utils/useFetch";
 import Loader from "./Loader";
+import ProductItem from "./ProductItem";
 
 const ProductLists = () => {
   const {
@@ -7,6 +8,8 @@ const ProductLists = () => {
     loading,
     error,
   } = useFetch("https://dummyjson.com/products");
+
+  // console.log(products);
 
   if (loading) {
     return <Loader />;
@@ -21,8 +24,19 @@ const ProductLists = () => {
   }
 
   return (
-    <div>
-      <h1>Product Lists</h1>
+    <div className="container mx-auto mt-4 grid w-11/12 grid-cols-4 gap-4">
+      {products.map(
+        ({ id, title, description, price, thumbnail, category }) => (
+          <ProductItem
+            key={id}
+            title={title}
+            description={description}
+            price={price}
+            thumbnail={thumbnail}
+            category={category}
+          />
+        ),
+      )}
     </div>
   );
 };
