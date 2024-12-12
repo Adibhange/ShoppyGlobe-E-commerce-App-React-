@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 import store from "./redux/store";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import Cart from "./pages/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "product/:id", element: <ProductDetails /> },
+      { path: "cart", element: <Cart /> },
     ],
   },
 ]);
@@ -27,6 +29,5 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
       <RouterProvider router={router} />
     </StrictMode>
-    ,
   </Provider>,
 );
