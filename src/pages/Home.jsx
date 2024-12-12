@@ -1,5 +1,11 @@
+import ProductLists from "../components/ProductLists";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section>
+      <ProductLists />
+    </section>
+  );
 };
 
 export default Home;
