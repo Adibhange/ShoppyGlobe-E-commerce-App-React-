@@ -24,19 +24,10 @@ const ProductLists = () => {
   }
 
   return (
-    <div className="container mx-auto mt-4 grid w-11/12 grid-cols-4 gap-4">
-      {products.map(
-        ({ id, title, description, price, thumbnail, category }) => (
-          <ProductItem
-            key={id}
-            title={title}
-            description={description}
-            price={price}
-            thumbnail={thumbnail}
-            category={category}
-          />
-        ),
-      )}
+    <div className="grid grid-cols-4 gap-4">
+      {products.map((product) => (
+        <ProductItem key={product.id} {...product} />
+      ))}
     </div>
   );
 };
