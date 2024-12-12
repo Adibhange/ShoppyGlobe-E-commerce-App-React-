@@ -16,6 +16,9 @@ export default {
         copy: "rgb(38, 38, 38)",
         "copy-light": "rgb(102, 102, 102)",
         "copy-lighter": "rgb(140, 140, 140)",
+
+        error: "rgb(255, 1, 1)",
+        "error-content": "rgb(255, 255, 255)",
       },
     },
   },
