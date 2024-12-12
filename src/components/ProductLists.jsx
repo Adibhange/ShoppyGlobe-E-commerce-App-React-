@@ -3,11 +3,9 @@ import Loader from "./Loader";
 import ProductItem from "./ProductItem";
 
 const ProductLists = () => {
-  const {
-    data: products,
-    loading,
-    error,
-  } = useFetch("https://dummyjson.com/products");
+  const { data, loading, error } = useFetch("https://dummyjson.com/products");
+
+  const products = data?.products;
 
   // console.log(products);
 
@@ -24,7 +22,7 @@ const ProductLists = () => {
   }
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="mx-auto mt-4 grid w-11/12 grid-cols-4 gap-4">
       {products.map((product) => (
         <ProductItem key={product.id} {...product} />
       ))}

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import { totalCartQuantity } from "../redux/cartSlice";
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
+  const totalQuantity = useSelector(totalCartQuantity);
 
   return (
     <header className="container mx-auto flex items-center justify-between bg-foreground px-16 py-4">
@@ -26,7 +28,7 @@ const Header = () => {
               <IoCartOutline size={24} />
               <span className="ml-2 mr-1">Cart</span>
               <span className="font-semiboldbold flex h-[32px] w-[32px] items-center justify-center rounded-full bg-primary text-primary-content">
-                {cartItems.length}
+                {totalQuantity}
               </span>
             </Link>
           </li>

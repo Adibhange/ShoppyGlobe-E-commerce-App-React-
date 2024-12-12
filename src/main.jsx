@@ -8,13 +8,17 @@ import { Provider } from "react-redux";
 
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 import store from "./redux/store";
+import ProductDetails from "./pages/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <NotFound />,
-    children: [{ index: true, element: <Home /> }],
+    children: [
+      { index: true, element: <Home /> },
+      { path: "product/:id", element: <ProductDetails /> },
+    ],
   },
 ]);
 
