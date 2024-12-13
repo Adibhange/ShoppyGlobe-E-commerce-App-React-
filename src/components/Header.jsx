@@ -8,7 +8,7 @@ const Header = () => {
   const totalQuantity = useSelector(totalCartQuantity);
 
   return (
-    <header className="container mx-auto flex items-center justify-between bg-foreground px-16 py-4">
+    <header className="container sticky top-0 mx-auto flex items-center justify-between bg-foreground px-16 py-4">
       {/* Logo */}
       <Link to="/">
         <h1 className="text-3xl font-bold text-primary">ShoppyGlobe</h1>
