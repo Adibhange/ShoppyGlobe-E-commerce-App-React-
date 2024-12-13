@@ -19,11 +19,13 @@ const Checkout = () => {
   };
 
   return (
-    <section className="container mx-auto mt-4 w-2/5 rounded-md bg-foreground shadow-md">
-      <div className="space-y-4 p-8">
-        <h1 className="text-center text-2xl font-semibold">Checkout</h1>
+    <section className="container mx-auto mt-4 w-full max-w-lg rounded-md bg-foreground px-4 py-6 shadow-md sm:px-8">
+      <div className="space-y-4">
+        <h1 className="text-center text-xl font-semibold sm:text-2xl">
+          Checkout
+        </h1>
 
-        <p className="text-xl">Payment Summary</p>
+        <p className="text-lg sm:text-xl">Payment Summary</p>
 
         <div className="flex flex-col gap-2">
           <p className="flex justify-between">
@@ -36,13 +38,13 @@ const Checkout = () => {
           </p>
 
           <hr className="border-2 border-border" />
-          <p className="flex justify-between">
+          <p className="flex justify-between font-semibold">
             <span>Total: </span>
             <span>${total}</span>
           </p>
 
           <button
-            className="w-full rounded-md bg-primary-light px-6 py-2 text-primary-content shadow-md"
+            className="w-full rounded-md bg-primary-light px-6 py-2 text-sm text-primary-content shadow-md transition-all hover:scale-105 hover:shadow-lg sm:text-base"
             onClick={handlePlaceOrder}
           >
             Place Order
