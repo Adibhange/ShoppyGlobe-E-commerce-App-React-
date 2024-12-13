@@ -21,7 +21,7 @@ ShoppyGlobe is a simple e-commerce app built using React. It allows users to bro
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/adityabinge/Internshala-Practise-Project.git
+git clone https://github.com/Adibhange/ShoppyGlobe-E-commerce-App-React-.git
 ```
 
 2. Install dependencies:
