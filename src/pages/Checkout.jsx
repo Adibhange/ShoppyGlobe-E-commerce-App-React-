@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const { cartItems } = useSelector((state) => state.cart);
+  const navigate = useNavigate();
 
   const subTotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -13,7 +15,7 @@ const Checkout = () => {
   const total = subTotal + shipping;
 
   const handlePlaceOrder = () => {
-    alert("Order Placed Successfully");
+    navigate("/");
   };
 
   return (
