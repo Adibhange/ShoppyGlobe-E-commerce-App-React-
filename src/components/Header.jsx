@@ -8,32 +8,45 @@ const Header = () => {
   const totalQuantity = useSelector(totalCartQuantity);
 
   return (
-    <header className="container sticky top-0 mx-auto flex items-center justify-between bg-foreground px-16 py-4">
-      {/* Logo */}
-      <Link to="/">
-        <h1 className="text-3xl font-bold text-primary">ShoppyGlobe</h1>
-      </Link>
+    <header className="sticky top-0 z-10 bg-foreground shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-8 lg:px-16">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-xl font-bold text-primary sm:text-2xl lg:text-3xl"
+        >
+          ShoppyGlobe
+        </Link>
 
-      {/* Navigation */}
-      <nav>
-        <ul className="flex items-center gap-8 text-xl">
-          <li>
-            <Link to="/" className="hover:text-primary">
-              Home
-            </Link>
-          </li>
+        {/* Navigation */}
+        <nav>
+          <ul className="flex items-center gap-4 text-sm sm:gap-6 sm:text-base lg:gap-8 lg:text-xl">
+            {/* Home Link */}
+            <li>
+              <Link
+                to="/"
+                className="transition-colors duration-300 hover:text-primary"
+              >
+                Home
+              </Link>
+            </li>
 
-          <li>
-            <Link to="/cart" className="flex items-center hover:text-primary">
-              <IoCartOutline size={24} />
-              <span className="ml-2 mr-1">Cart</span>
-              <span className="font-semiboldbold flex h-[32px] w-[32px] items-center justify-center rounded-full bg-primary text-primary-content">
-                {totalQuantity}
-              </span>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+            {/* Cart Link */}
+            <li>
+              <Link
+                to="/cart"
+                className="flex items-center transition-colors duration-300 hover:text-primary"
+              >
+                <IoCartOutline size={20} className="sm:size-[24px]" />
+                <span className="ml-1 sm:ml-2">Cart</span>
+                <span className="ml-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs text-primary-content sm:h-8 sm:w-8 sm:text-sm lg:h-[32px] lg:w-[32px]">
+                  {totalQuantity}
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
