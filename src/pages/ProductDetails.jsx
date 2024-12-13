@@ -31,16 +31,25 @@ const ProductDetails = () => {
   };
 
   return (
-    <section className="container mx-auto mt-4 flex w-3/4 gap-4 rounded-lg bg-foreground shadow-md">
-      <div className="flex w-1/2 items-center justify-center rounded-l-lg bg-primary/20">
-        <img src={product.thumbnail} alt={product.title} className="h-96" />
+    <section className="container mx-auto mt-4 flex flex-col gap-4 rounded-lg bg-foreground shadow-md sm:w-3/4 sm:flex-row">
+      {/* Image Section */}
+      <div className="flex w-full items-center justify-center rounded-t-lg bg-primary/20 sm:w-1/2 sm:rounded-l-lg sm:rounded-t-none">
+        <img
+          src={product.thumbnail}
+          alt={product.title}
+          className="h-64 sm:h-96"
+        />
       </div>
-      <div className="w-1/2 space-y-8 p-4">
+
+      {/* Details Section */}
+      <div className="w-full space-y-8 p-4 sm:w-1/2">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold">{product.title}</h1>
-          <p className="text-2xl text-primary">Price: ${product.price}</p>
+          <h1 className="text-2xl font-bold sm:text-3xl">{product.title}</h1>
+          <p className="text-xl text-primary sm:text-2xl">
+            Price: ${product.price}
+          </p>
         </div>
-        <div className="flex gap-4 text-lg">
+        <div className="flex flex-wrap gap-4 text-base sm:text-lg">
           <p className="font-bold">⭐{product.rating}</p>
           <p>
             <span className="font-bold">Category:</span> {product.category}
@@ -48,7 +57,7 @@ const ProductDetails = () => {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">Description</h2>
+          <h2 className="text-lg font-semibold sm:text-2xl">Description</h2>
           <p>{product.description}</p>
         </div>
 
