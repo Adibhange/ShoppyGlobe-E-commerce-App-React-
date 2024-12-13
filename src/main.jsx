@@ -5,12 +5,13 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import { Provider } from "react-redux";
-
-const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 import store from "./redux/store";
-import ProductDetails from "./pages/ProductDetails.jsx";
-import Cart from "./pages/Cart.jsx";
-import Checkout from "./pages/Checkout.jsx";
+
+//================================== Lazy Loading ==================================//
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+const ProductDetails = lazy(() => import("./pages/ProductDetails.jsx"));
+const Cart = lazy(() => import("./pages/Cart.jsx"));
+const Checkout = lazy(() => import("./pages/Checkout.jsx"));
 
 const router = createBrowserRouter([
   {
