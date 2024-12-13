@@ -1,8 +1,37 @@
-# React + Vite
+## ShoppyGlobe E-commerce App (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShoppyGlobe is a simple e-commerce app built using React. It allows users to browse and purchase products from a variety of categories. The app also includes a shopping cart and checkout functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse and purchase products from a variety of categories.
+- Add products to the shopping cart.
+- View the shopping cart and checkout.
+- Add a search bar to filter products.
+
+## Technologies Used
+
+- React
+- Redux
+- Tailwind CSS
+- React Router
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/adityabinge/Internshala-Practise-Project.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
