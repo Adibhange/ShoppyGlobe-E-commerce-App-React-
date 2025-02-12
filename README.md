@@ -11,7 +11,7 @@ ShoppyGlobe is a simple e-commerce app built using React. It allows users to bro
 
 ## Technologies Used
 
-- React
+- ReactJS
 - Redux
 - Tailwind CSS
 - React Router
