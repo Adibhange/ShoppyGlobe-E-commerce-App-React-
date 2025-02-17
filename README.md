@@ -7,7 +7,7 @@ ShoppyGlobe is a simple e-commerce app built using React. It allows users to bro
 - Browse and purchase products from a variety of categories.
 - Add products to the shopping cart.
 - View the shopping cart and checkout.
-- Add a search bar to filter products.
+- Search bar to filter products.
 
 ## Technologies Used
 
